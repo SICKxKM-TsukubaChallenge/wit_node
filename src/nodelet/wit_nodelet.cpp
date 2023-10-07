@@ -29,7 +29,7 @@ class WitNodelet : public nodelet::Nodelet {
 
  private:
   void update() {
-    Rate spin_rate(10);
+    Rate spin_rate(40);
     while (!shutdown_requested_ && ok()) {
       wit_->update();
       spin_rate.sleep();
